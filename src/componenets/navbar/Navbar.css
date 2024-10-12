@@ -1,0 +1,54 @@
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 12px;
+  height: auto;
+}
+
+nav img {
+  width: 100px;
+}
+
+.custom-input {
+  width: 300px;
+  height: 40px;
+  padding: 12px;
+}
+
+/* Clean button inside the input */
+.custom-input .ant-input-clear-icon {
+  font-size: 20px;
+  height: 26px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+nav ul li {
+  position: relative; /* positioning the border */
+}
+
+nav ul li .link {
+  text-decoration: none;
+  color: black; /* Change this to your preferred color */
+  padding: 5px 0;
+}
+
+nav ul li .link:hover,
+nav ul li .link:active {
+  border-bottom: 2px solid gray;
+}
+
+/* Switch button icons */
+.switch-icons {
+  color: #ffffff;
+  font-weight: bolder;
+}
