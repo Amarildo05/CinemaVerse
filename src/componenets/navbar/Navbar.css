@@ -1,3 +1,4 @@
+/* Navbar */
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -5,6 +6,9 @@ nav {
   justify-content: space-around;
   padding: 2px;
   height: auto;
+  position: sticky; /* Make it sticky */
+  top: 0;
+  z-index: 1000; 
 }
 
 nav img {
@@ -16,6 +20,7 @@ nav img:hover {
   transform: scale(1.15);
 }
 
+/* Search Input */
 .custom-input {
   width: 300px;
   height: 40px;
@@ -28,6 +33,7 @@ nav img:hover {
   height: 26px;
 }
 
+/* Home/Favorites */
 nav ul {
   list-style-type: none;
   display: flex;

@@ -1,17 +1,26 @@
+import { Pagination } from "antd";
 import useFetch from "../../../hooks/useFetch";
+import Error from "../../common/Error";
+import Loading from "../../common/Loading";
 import MovieCard from "../movieCart/MovieCart";
 import "./MovieList.css";
+import { useState } from "react";
 
 export default function MovieList() {
-  const { data: movies, loading, error } = useFetch();
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const { data: movies, loading, error } = useFetch(currentPage);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <Loading />;
   }
 
   if (error) {
-    return <p>Something went wrong...</p>;
+    return <Error />;
   }
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+  };
 
   return (
     <div className="movie-card-container">
@@ -25,6 +34,12 @@ export default function MovieList() {
           />
         );
       })}
+      <Pagination
+        current={currentPage}
+        onChange={handlePageChange}
+        showSizeChanger={false}
+        total={400}
+      />
     </div>
   );
 }

@@ -27,6 +27,7 @@ function App() {
       element: <Favorites />,
     },
   ]);
+
   return (
     <>
       <GlobalContext.Provider value={{ theme, setTheme }}>
