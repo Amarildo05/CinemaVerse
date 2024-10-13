@@ -37,7 +37,7 @@ export default function Navbar() {
   return (
     <nav
       style={{
-        backgroundColor: themeContext.theme === "light" ? "#D3D3D3" : "#404040",
+        backgroundColor: themeContext.theme === "light" ? "#b8b8b8" : "#404040",
         color: themeContext.theme === "light" ? "#333" : "#E0E0E0",
         borderBottom:
           themeContext.theme === "light"
@@ -45,18 +45,21 @@ export default function Navbar() {
             : "2px solid #5e5e5e",
       }}
     >
-      <img
-        src={
-          themeContext.theme === "light"
-            ? "./fork-spoon-light.svg"
-            : "./fork-spoon-dark.svg"
-        }
-      />
+      <Link to={"/"}>
+        <img
+          src={
+            themeContext.theme === "light"
+              ? "/logo-black.webp"
+              : "/logo-white.webp"
+          }
+        />
+      </Link>
+
       <Input
         className="custom-input"
         style={{
           backgroundColor:
-            themeContext.theme === "light" ? "#FFFFFF" : "#dbdbdb",
+            themeContext.theme === "light" ? "#ededed" : "#dbdbdb",
           border:
             themeContext.theme === "light"
               ? "1px solid #E0E0E0"
@@ -83,12 +86,8 @@ export default function Navbar() {
           background: themeContext.theme === "dark" ? "#4A90E2" : "#889499",
           marginLeft: "20px",
         }}
-        checkedChildren={
-          <SunOutlined className="switch-icons" />
-        }
-        unCheckedChildren={
-          <MoonOutlined className="switch-icons" />
-        }
+        checkedChildren={<SunOutlined className="switch-icons" />}
+        unCheckedChildren={<MoonOutlined className="switch-icons" />}
         defaultChecked={themeContext.theme === "light"}
         onChange={onChange}
       />

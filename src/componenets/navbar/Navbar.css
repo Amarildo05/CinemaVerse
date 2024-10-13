@@ -3,12 +3,12 @@ nav {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  padding: 12px;
+  padding: 6px;
   height: auto;
 }
 
 nav img {
-  width: 100px;
+  width: 55px;
 }
 
 .custom-input {
@@ -38,7 +38,7 @@ nav ul li {
 
 nav ul li .link {
   text-decoration: none;
-  color: black; /* Change this to your preferred color */
+  color: black;
   padding: 5px 0;
 }
 

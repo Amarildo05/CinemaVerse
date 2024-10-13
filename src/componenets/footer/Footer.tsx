@@ -11,11 +11,19 @@ export default function Footer() {
         className="footer"
         style={{
           backgroundColor:
-            themeContext.theme === "light" ? "#D3D3D3" : "#404040",
+            themeContext.theme === "light" ? "#b8b8b8" : "#404040",
           color: themeContext.theme === "light" ? "#333" : "#E0E0E0",
         }}
       >
         <div className="footer-content">
+          <img
+            src={
+              themeContext.theme === "light"
+                ? "/full-logo-black.webp"
+                : "/full-logo-white.webp"
+            }
+          />
+
           <p>
             &copy; {new Date().getFullYear()} CinemaVerse. All rights reserved.
           </p>
