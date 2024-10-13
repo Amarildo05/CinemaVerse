@@ -1,0 +1,14 @@
+.movie-card {
+  width: 260px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  margin: 16px;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.meta-title {
+  text-align: center;
+}

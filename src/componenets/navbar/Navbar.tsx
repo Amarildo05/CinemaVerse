@@ -1,13 +1,14 @@
 import { useContext } from "react";
 import "./Navbar.css";
 import { GlobalContext } from "../../context/GlobalContext";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { MoonOutlined, SunOutlined } from "@ant-design/icons";
 import { Input, Switch } from "antd";
 
 export default function Navbar() {
   const themeContext = useContext(GlobalContext);
+  const currentPath = useLocation();
 
   function onChange(checked: boolean) {
     if (checked) {
@@ -54,7 +55,6 @@ export default function Navbar() {
           }
         />
       </Link>
-
       <Input
         className="custom-input"
         style={{
@@ -68,19 +68,24 @@ export default function Navbar() {
         placeholder="Search for a movie"
         allowClear
       />
-
+      
       <ul>
         {navItems.map((item) => {
           return (
             <li>
-              <Link className="link" style={linkStyles} to={item.path}>
+              <Link
+                className={`link ${
+                  item.path === currentPath.pathname ? "active" : ""
+                }`}
+                style={linkStyles}
+                to={item.path}
+              >
                 {item.label}
               </Link>
             </li>
           );
         })}
       </ul>
-
       <Switch
         style={{
           background: themeContext.theme === "dark" ? "#4A90E2" : "#889499",

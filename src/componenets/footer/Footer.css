@@ -1,7 +1,7 @@
 .footer {
-  padding: 10px;
+  padding: 8px;
   text-align: center;
-  margin-top: auto;
+  margin-top: auto; /* pushes the footer at the bottom */
 }
 
 .footer-content {
