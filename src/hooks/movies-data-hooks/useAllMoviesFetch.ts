@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { MovieType } from "../types";
+import { AllMoviesType } from "../../types";
 
-export default function useFetch(page: number) {
-  const [data, setData] = useState<MovieType[]>([]);
+export default function useAllMoviesFetch(page: number) {
+  const [data, setData] = useState<AllMoviesType[]>([]);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
 

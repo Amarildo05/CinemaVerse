@@ -1,0 +1,14 @@
+.movie-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Adjust the height as needed */
+}
+
+.movie-poster {
+  width: 60%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}

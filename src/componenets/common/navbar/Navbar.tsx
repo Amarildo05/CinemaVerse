@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import "./Navbar.css";
-import { GlobalContext } from "../../context/GlobalContext";
+import { GlobalContext } from "../../../context/GlobalContext";
 import { Link, useLocation } from "react-router-dom";
 
 import { MoonOutlined, SunOutlined } from "@ant-design/icons";
@@ -68,7 +68,7 @@ export default function Navbar() {
         placeholder="Search for a movie"
         allowClear
       />
-      
+
       <ul>
         {navItems.map((item) => {
           return (

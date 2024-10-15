@@ -1,15 +1,10 @@
 import { Card } from "antd";
 import "./MovieCart.css";
-
-interface Props {
-  poster_path: string;
-  title: string;
-  id: number;
-}
+import { MovieType } from "../../../types";
 
 const { Meta } = Card;
 
-export default function MovieCard(props: Props) {
+export default function MovieCard(props: MovieType) {
   return (
     <Card
       className="movie-card"

@@ -1,5 +1,5 @@
-import Footer from "../componenets/footer/Footer";
-import Navbar from "../componenets/navbar/Navbar";
+import Footer from "../componenets/common/footer/Footer";
+import Navbar from "../componenets/common/navbar/Navbar";
 import "./PageContainer.css";
 
 export default function Favorites() {
