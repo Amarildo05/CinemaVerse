@@ -12,3 +12,7 @@
 .meta-title {
   text-align: center;
 }
+
+.white-text {
+  color: white; /* Change text color to white */
+}

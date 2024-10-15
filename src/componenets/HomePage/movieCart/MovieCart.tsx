@@ -1,13 +1,23 @@
 import { Card } from "antd";
 import "./MovieCart.css";
-import { MovieType } from "../../../types";
+import { AllMoviesType } from "../../../types";
+import { GlobalContext } from "../../../context/GlobalContext";
+import { useContext } from "react";
 
 const { Meta } = Card;
 
-export default function MovieCard(props: MovieType) {
+export default function MovieCard(props: AllMoviesType) {
+  const themeContext = useContext(GlobalContext);
   return (
     <Card
       className="movie-card"
+      style={{
+        backgroundColor: themeContext.theme === "dark" ? "#404040" : "#b8b8b8",
+        border:
+          themeContext.theme === "dark"
+            ? "1px solid #404040"
+            : "1px solid #b8b8b8",
+      }}
       hoverable
       cover={
         <img
@@ -17,7 +27,16 @@ export default function MovieCard(props: MovieType) {
         />
       }
     >
-      <Meta className="meta-title" title={props.title} />
+      <Meta
+        className="meta-title white-text"
+        title={
+          <span
+            style={{ color: themeContext.theme === "dark" ? "white" : "black" }}
+          >
+            {props.title}
+          </span>
+        }
+      />
     </Card>
   );
 }
