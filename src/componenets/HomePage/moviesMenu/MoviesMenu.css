@@ -1,0 +1,55 @@
+/* Styles for dark mode Menu */
+.menu-dark .ant-menu {
+  background-color: #5a5a5a;
+  padding-left: 5%;
+}
+
+/* Change text color for all menu items */
+.menu-dark .ant-menu .ant-menu-item {
+  color: #ffffff;
+}
+
+/* Change text color on hover */
+.menu-dark .ant-menu .ant-menu-item:hover,
+.menu-dark .ant-menu .ant-menu-item:hover > a {
+  color: white !important;
+}
+
+/* Change color for selected menu item */
+.menu-dark .ant-menu .ant-menu-item.ant-menu-item-selected {
+  background-color: #5a5a5a; /* Background color for selected item */
+  color: #ffffff;
+}
+
+/* Change color for selected item on hover */
+.menu-dark .ant-menu .ant-menu-item.ant-menu-item-selected:hover {
+  background-color: #5a5a5a; /* Background color for selected item on hover */
+}
+
+/* Styles for light mode Menu */
+.menu-light .ant-menu {
+  background-color: #e6e6e6;
+  padding-left: 5%;
+}
+
+/* Change text color for all menu items */
+.menu-light .ant-menu .ant-menu-item {
+  color: black;
+}
+
+/* Change text color on hover */
+.menu-light .ant-menu .ant-menu-item:hover,
+.menu-light .ant-menu .ant-menu-item:hover > a {
+  color: black !important;
+}
+
+/* Change color for selected menu item */
+.menu-light .ant-menu .ant-menu-item.ant-menu-item-selected {
+  background-color: #e6e6e6; /* Background color for selected item */
+  color: black;
+}
+
+/* Change color for selected item on hover */
+.menu-light .ant-menu .ant-menu-item.ant-menu-item-selected:hover {
+  background-color: #e6e6e6; /* Background color for selected item on hover */
+}

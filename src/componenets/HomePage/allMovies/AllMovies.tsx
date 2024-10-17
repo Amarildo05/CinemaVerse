@@ -38,6 +38,8 @@ export default function AllMovies() {
             />
           );
         })}
+      </div>
+      <div className="pagination">
         <Pagination
           current={currentPage}
           onChange={handlePageChange}

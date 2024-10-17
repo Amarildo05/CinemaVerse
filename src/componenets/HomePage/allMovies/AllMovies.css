@@ -2,5 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 15px 0px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
 }
