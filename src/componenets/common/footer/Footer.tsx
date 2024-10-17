@@ -25,10 +25,14 @@ export default function Footer() {
           />
 
           <p>
-            Copyright &copy; {new Date().getFullYear()} CinemaVerse. All rights
+            Copyright &copy; {new Date().getFullYear()} | CinemaVerse. All rights
             reserved.
           </p>
         </div>
+        <p>
+          This site does not store any files on its server! All contents are
+          provided by non-affiliated third parties!
+        </p>
       </footer>
     </>
   );

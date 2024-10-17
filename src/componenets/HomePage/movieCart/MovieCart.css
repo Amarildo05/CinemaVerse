@@ -16,3 +16,27 @@
 .white-text {
   color: white; /* Change text color to white */
 }
+
+/* styles for the Popover */
+.popover-content {
+  max-width: 320px;
+  padding: 16px;
+  text-align: center;
+}
+
+.popover-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.popover-overview {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.popover-rate {
+  display: flex;
+  justify-content: center;
+  color: #ffc107;
+}
