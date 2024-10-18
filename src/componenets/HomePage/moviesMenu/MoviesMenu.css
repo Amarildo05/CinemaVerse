@@ -1,7 +1,8 @@
 /* Styles for dark mode Menu */
 .menu-dark .ant-menu {
+  display: flex;
+  justify-content: center;
   background-color: #5a5a5a;
-  padding-left: 5%;
 }
 
 /* Change text color for all menu items */
@@ -28,8 +29,9 @@
 
 /* Styles for light mode Menu */
 .menu-light .ant-menu {
+  display: flex;
+  justify-content: center;
   background-color: #e6e6e6;
-  padding-left: 5%;
 }
 
 /* Change text color for all menu items */

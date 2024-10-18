@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { PopularMoviesType } from "../../types";
 
 export default function usePopularMoviesFetch() {
-  const [popularMoviesData, setPopularMovieData] = useState<
+  const [popularMoviesData, setPopularMoviesData] = useState<
     PopularMoviesType[]
   >([]);
   const [error, setError] = useState(false);
@@ -14,7 +14,7 @@ export default function usePopularMoviesFetch() {
       const url = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=2&api_key=1d1d8844ae1e746c459e7be85c15c840`;
       try {
         const { data } = await axios.get(url);
-        setPopularMovieData(data.results);
+        setPopularMoviesData(data.results);
         setLoading(false);
       } catch (error) {
         console.log(error);

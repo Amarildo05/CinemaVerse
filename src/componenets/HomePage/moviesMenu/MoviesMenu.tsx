@@ -43,7 +43,7 @@ export default function MoviesMenu() {
           onClick={handleMenuClick}
           selectedKeys={[selectedKey]}
           mode="horizontal"
-          style={{ fontSize: '16px'}} 
+          style={{ fontSize: '15px'}} 
         >
           <Menu.Item key="all" icon={<HomeOutlined />}>
             Browse All
@@ -52,7 +52,7 @@ export default function MoviesMenu() {
             Top Rated
           </Menu.Item>
           <Menu.Item key="upcoming" icon={<CalendarOutlined />}>
-            Coming Soon
+            Upcoming
           </Menu.Item>
         </Menu>
         <div>{renderContent()}</div>

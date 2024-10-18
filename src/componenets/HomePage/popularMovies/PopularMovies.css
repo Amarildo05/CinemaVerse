@@ -1,6 +1,5 @@
 .carousel-container {
   width: 70%;
-
   margin: 25px auto; /* Center the carousel */
 }
 
@@ -8,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30vh; /* Base height */
+  height: 25vh; /* Base height */
   outline: none; /* Hide the border around image */
 }
 
@@ -27,7 +26,7 @@
 }
 
 /* For larger screens */
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .movie-slide {
     height: 35vh; /* Increase height for larger screens */
   }
@@ -41,5 +40,11 @@
 
   .movie-slide {
     height: 20vh; /* Decrease height for smaller screens */
+  }
+}
+
+@media (max-width: 420px) {
+  .movie-slide {
+    height: 15vh; /* Decrease height for smaller screens */
   }
 }

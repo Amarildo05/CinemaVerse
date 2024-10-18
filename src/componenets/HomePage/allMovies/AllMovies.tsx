@@ -8,7 +8,7 @@ import useAllMoviesFetch from "../../../hooks/movies-data-hooks/useAllMoviesFetc
 
 export default function AllMovies() {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const { data: allMovies, loading, error } = useAllMoviesFetch(currentPage);
+  const { allMoviesData: allMovies, loading, error } = useAllMoviesFetch(currentPage);
 
   if (loading) {
     return <Loading />;
