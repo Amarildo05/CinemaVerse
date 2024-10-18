@@ -3,7 +3,12 @@ import "./Navbar.css";
 import { GlobalContext } from "../../../context/GlobalContext";
 import { Link, useLocation } from "react-router-dom";
 
-import { MoonOutlined, SunOutlined } from "@ant-design/icons";
+import {
+  HeartOutlined,
+  HomeOutlined,
+  MoonOutlined,
+  SunOutlined,
+} from "@ant-design/icons";
 import { Input, Switch } from "antd";
 
 export default function Navbar() {
@@ -28,10 +33,12 @@ export default function Navbar() {
     {
       label: "Home",
       path: "/",
+      icon: <HomeOutlined />,
     },
     {
       label: "My Favorites",
       path: "/favorites",
+      icon: <HeartOutlined />,
     },
   ];
 
@@ -80,7 +87,7 @@ export default function Navbar() {
                 style={linkStyles}
                 to={item.path}
               >
-                {item.label}
+                <span>{item.icon}</span> {item.label}
               </Link>
             </li>
           );

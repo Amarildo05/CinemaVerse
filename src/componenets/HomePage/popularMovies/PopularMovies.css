@@ -9,6 +9,12 @@
   align-items: center;
   height: 25vh; /* Base height */
   outline: none; /* Hide the border around image */
+  transition: transform 0.3s;
+}
+
+.movie-slide:hover {
+  transform: scale(1.15);
+  cursor: pointer;
 }
 
 .movie-poster {
