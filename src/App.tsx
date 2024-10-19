@@ -5,6 +5,7 @@ import Favorites from "./pages/Favorites";
 import { useState } from "react";
 import { GlobalContext } from "./context/GlobalContext";
 import { ThemeType } from "./types";
+import { FloatButton } from "antd";
 
 function App() {
   const defaultTheme: ThemeType = localStorage.getItem("theme")
@@ -32,6 +33,7 @@ function App() {
     <>
       <GlobalContext.Provider value={{ theme, setTheme }}>
         <RouterProvider router={router} />
+        <FloatButton.BackTop />
       </GlobalContext.Provider>
     </>
   );

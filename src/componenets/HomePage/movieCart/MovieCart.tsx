@@ -4,6 +4,7 @@ import { AllMoviesType } from "../../../types";
 import { GlobalContext } from "../../../context/GlobalContext";
 import { useContext } from "react";
 import useMovieNavigation from "../../../hooks/useMovieNavigation";
+import { HeartOutlined } from "@ant-design/icons";
 
 const { Meta } = Card;
 
@@ -49,7 +50,7 @@ export default function MovieCard(props: AllMoviesType) {
         }
       >
         <Meta
-          className="meta-title white-text"
+          className="meta-title"
           title={
             <span
               style={{
@@ -59,16 +60,31 @@ export default function MovieCard(props: AllMoviesType) {
               {props.title}
             </span>
           }
-          // description={
-          //   <span
-          //     style={{
-          //       color: themeContext.theme === "dark" ? "white" : "black",
-          //     }}
-          //   >
-          //     {props.genre_ids}
-          //   </span>
-          // }
+          description={
+            <span
+              style={{
+                color: themeContext.theme === "dark" ? "white" : "black",
+              }}
+            >
+              {props.genre_ids}
+            </span>
+          }
         />
+        <button
+          className="favorite-button"
+          style={{
+            background: "transparent",
+            border: "none",
+            cursor: "pointer",
+            position: "absolute",
+            bottom: "10px",
+            right: "10px",
+            color: themeContext.theme === "dark" ? "white" : "black",
+          }}
+          onClick={(e) => e.stopPropagation()} // Prevent triggering the card click
+        >
+          <HeartOutlined style={{ fontSize: "18px" }} />
+        </button>
       </Card>
     </Popover>
   );
