@@ -5,6 +5,10 @@
   margin: 16px;
 }
 
+.movie-card-image {
+  height: 380px;
+}
+
 .movie-card:hover {
   transform: scale(1.05);
 }
@@ -39,4 +43,8 @@
   display: flex;
   justify-content: center;
   color: #ffc107;
+}
+
+.link {
+  text-decoration: none;
 }

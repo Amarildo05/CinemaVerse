@@ -47,10 +47,6 @@ export default function Navbar() {
       style={{
         backgroundColor: themeContext.theme === "light" ? "#b8b8b8" : "#404040",
         color: themeContext.theme === "light" ? "#333" : "#E0E0E0",
-        borderBottom:
-          themeContext.theme === "light"
-            ? "1px solid whitesmoke"
-            : "2px solid #5e5e5e",
       }}
     >
       <Link to={"/"}>
@@ -81,7 +77,7 @@ export default function Navbar() {
           return (
             <li>
               <Link
-                className={`link ${
+                className={`link-home ${
                   item.path === currentPath.pathname ? "active" : ""
                 }`}
                 style={linkStyles}

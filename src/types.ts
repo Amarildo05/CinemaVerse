@@ -12,4 +12,5 @@ export type AllMoviesType = {
 export type PopularMoviesType = {
   id: number;
   poster_path: string;
+  title: string;
 };

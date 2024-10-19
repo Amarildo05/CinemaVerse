@@ -6,7 +6,7 @@ nav {
   justify-content: space-around;
   padding: 2px;
   height: auto;
-  position: sticky; /* Make it sticky */
+  position: sticky; /* Make it sticky on top */
   top: 0;
   z-index: 1000;
 }
@@ -39,7 +39,7 @@ nav ul {
   display: flex;
   gap: 35px;
   align-items: center;
-  font-size: 18px;
+  font-size: 16px;
   margin-left: 20px;
 }
 
@@ -47,13 +47,13 @@ nav ul li {
   position: relative; /* positioning the border */
 }
 
-.link {
+.link-home {
   text-decoration: none;
   padding: 5px 0;
 }
 
-.link:hover,
-.link.active {
+.link-home:hover,
+.link-home.active {
   border-bottom: 2px solid #1677ff;
 }
 
