@@ -1,11 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import SingeMovie from "./pages/SingeMovie";
 import Favorites from "./pages/Favorites";
 import { useState } from "react";
 import { GlobalContext } from "./context/GlobalContext";
 import { ThemeType } from "./types";
 import { FloatButton } from "antd";
+import SingleMovie from "./pages/SingleMovie";
 
 function App() {
   const defaultTheme: ThemeType = localStorage.getItem("theme")
@@ -21,7 +21,7 @@ function App() {
     },
     {
       path: "/singleMovie",
-      element: <SingeMovie />,
+      element: <SingleMovie />,
     },
     {
       path: "/favorites",

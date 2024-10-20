@@ -75,7 +75,7 @@ export default function Navbar() {
       <ul>
         {navItems.map((item) => {
           return (
-            <li>
+            <li key={item.path}>
               <Link
                 className={`link-home ${
                   item.path === currentPath.pathname ? "active" : ""

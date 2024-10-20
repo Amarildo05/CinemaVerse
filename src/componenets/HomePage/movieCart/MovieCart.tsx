@@ -81,7 +81,7 @@ export default function MovieCard(props: AllMoviesType) {
             right: "10px",
             color: themeContext.theme === "dark" ? "white" : "black",
           }}
-          onClick={(e) => e.stopPropagation()} // Prevent triggering the card click
+          onClick={(e) => e.stopPropagation()} // prevent it to be clicked
         >
           <HeartOutlined style={{ fontSize: "18px" }} />
         </button>

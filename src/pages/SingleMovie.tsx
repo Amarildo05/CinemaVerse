@@ -4,7 +4,7 @@ import Navbar from "../componenets/common/navbar/Navbar";
 import "./PageContainer.css";
 import { GlobalContext } from "../context/GlobalContext";
 
-export default function SingeMovie() {
+export default function SingleMovie() {
   const themeContext = useContext(GlobalContext);
   return (
     <div
@@ -15,7 +15,7 @@ export default function SingeMovie() {
       }}
     >
       <Navbar />
-      <div>SingeMovie</div>
+      Single Movie
       <Footer />
     </div>
   );

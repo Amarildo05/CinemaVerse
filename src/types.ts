@@ -14,3 +14,21 @@ export type PopularMoviesType = {
   poster_path: string;
   title: string;
 };
+
+export type GenreType = {
+  id: number;
+  name: string;
+};
+
+export type SingleMovieType = {
+  id: number;
+  title: string;
+  backdrop_path: string;
+  genres: GenreType[]; // Change to an array of GenreType
+  origin_country: string[];
+  overview: string;
+  status: string;
+  tagline: string;
+  release_date: string;
+  runtime: number;
+};
