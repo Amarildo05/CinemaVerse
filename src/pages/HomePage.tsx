@@ -12,7 +12,7 @@ export default function HomePage() {
     <div
       className="page-container"
       style={{
-        backgroundColor: themeContext.theme === "dark" ? "#5a5a5a " : "#e6e6e6 ",
+        backgroundColor: themeContext.theme === "dark" ? "#5a5a5a" : "#e6e6e6",
       }}
     >
       <Navbar />

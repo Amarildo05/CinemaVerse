@@ -91,7 +91,7 @@ export default function Navbar() {
       </ul>
       <Switch
         style={{
-          background: themeContext.theme === "dark" ? "#4A90E2" : "#889499",
+          background: themeContext.theme === "dark" ? "#1677ff" : "#889499",
           marginLeft: "20px",
         }}
         checkedChildren={<SunOutlined className="switch-icons" />}
