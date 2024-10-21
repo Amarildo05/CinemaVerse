@@ -17,3 +17,10 @@
 .footer-content img {
   width: 150px;
 }
+
+@media (max-width: 800px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

@@ -67,3 +67,44 @@ nav ul li {
 span {
   margin-right: 2px;
 }
+
+/* Responsive Styles */
+.mobile-menu-icon {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-icon {
+    display: block; /* Show hamburger icon on small screens */
+    font-size: 23px;
+  }
+
+  nav ul {
+    width: 200px;
+    height: 220px;
+    flex-direction: column;
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 60px; /* Adjust based on your navbar height */
+    left: 10;
+    right: 0;
+    background-color: inherit;
+    padding: 10px;
+    z-index: 999; /* Ensure it's above other content */
+  }
+
+  nav ul.open {
+    display: flex; /* Show when open */
+  }
+
+  nav ul li {
+    margin: 10px 0; /* Spacing between items */
+    text-align: center;
+  }
+
+  .custom-input {
+    width: 200px;
+    height: 37px;
+  }
+}

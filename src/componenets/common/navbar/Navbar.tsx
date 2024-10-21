@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import "./Navbar.css";
 import { GlobalContext } from "../../../context/GlobalContext";
 import { Link, useLocation } from "react-router-dom";
@@ -8,12 +8,14 @@ import {
   HomeOutlined,
   MoonOutlined,
   SunOutlined,
+  MenuFoldOutlined,
 } from "@ant-design/icons";
 import { Input, Switch } from "antd";
 
 export default function Navbar() {
   const themeContext = useContext(GlobalContext);
   const currentPath = useLocation();
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   function onChange(checked: boolean) {
     if (checked) {
@@ -41,6 +43,10 @@ export default function Navbar() {
       icon: <HeartOutlined />,
     },
   ];
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
     <nav
@@ -72,7 +78,11 @@ export default function Navbar() {
         allowClear
       />
 
-      <ul>
+      <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
+        <MenuFoldOutlined style={{ color: linkStyles.color }} />
+      </div>
+
+      <ul className={`${isMobileMenuOpen ? "open" : ""}`}>
         {navItems.map((item) => {
           return (
             <li key={item.path}>
@@ -88,17 +98,17 @@ export default function Navbar() {
             </li>
           );
         })}
+        <Switch
+          style={{
+            background: themeContext.theme === "dark" ? "#1677ff" : "#889499",
+            marginLeft: "20px",
+          }}
+          checkedChildren={<SunOutlined className="switch-icons" />}
+          unCheckedChildren={<MoonOutlined className="switch-icons" />}
+          defaultChecked={themeContext.theme === "light"}
+          onChange={onChange}
+        />
       </ul>
-      <Switch
-        style={{
-          background: themeContext.theme === "dark" ? "#1677ff" : "#889499",
-          marginLeft: "20px",
-        }}
-        checkedChildren={<SunOutlined className="switch-icons" />}
-        unCheckedChildren={<MoonOutlined className="switch-icons" />}
-        defaultChecked={themeContext.theme === "light"}
-        onChange={onChange}
-      />
     </nav>
   );
 }

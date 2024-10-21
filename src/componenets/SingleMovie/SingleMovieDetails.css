@@ -50,7 +50,7 @@
 }
 
 .trailer-button {
-  width: 100px;
+  width: 95px;
   background-color: #1677ff;
   color: #e6e6e6;
   border: none;
@@ -62,6 +62,7 @@
   gap: 5px;
   transition: background-color 0.3s;
   margin-top: 10px;
+  font-size: 15px;
 }
 
 .trailer-button:hover {
@@ -77,31 +78,31 @@
 @media (max-width: 800px) {
   .single-movie-container {
     flex-direction: column;
-    padding: 10px; /* Adjust padding for smaller screens */
+    padding: 10px;
   }
 
   .single-movie-info h1 {
-    font-size: 1.5rem; /* Responsive heading size */
+    font-size: 1.5rem;
   }
 
   .button-rate-container {
-    flex-direction: column; /* Stack on smaller screens */
-    align-items: center; /* Align to the left */
+    flex-direction: column;
+    align-items: center;
   }
 
   .trailer-button {
-    margin-right: 0; /* Remove margin on smaller screens */
-    margin-bottom: 10px; /* Space below button */
+    margin-right: 0;
+    margin-bottom: 10px; 
   }
 
   .single-movie-info {
-    text-align: center; /* Center text in the container */
+    text-align: center;
   }
 
   .single-movie-info h1,
   .single-movie-info .overview,
   .single-movie-meta p {
-    margin: 10px 0; /* Maintain some spacing */
+    margin: 10px 0;
     max-width: 100%; /* Ensure they don't overflow */
   }
 }
