@@ -11,7 +11,7 @@ export default function useUpcomingMoviesFetch() {
 
   useEffect(() => {
     async function getData() {
-      const url = `https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=2&api_key=1d1d8844ae1e746c459e7be85c15c840`;
+      const url = `https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1&api_key=1d1d8844ae1e746c459e7be85c15c840`;
       try {
         const { data } = await axios.get(url);
         setUpcomingMoviesData(data.results);

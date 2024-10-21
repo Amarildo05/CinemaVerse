@@ -31,4 +31,5 @@ export type SingleMovieType = {
   tagline: string;
   release_date: string;
   runtime: number;
+  vote_average: number;
 };

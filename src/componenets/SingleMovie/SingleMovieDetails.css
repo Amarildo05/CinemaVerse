@@ -1,28 +1,56 @@
-.movie-details {
+.single-movie-details {
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
+  justify-content: center;
+  padding-top: 5%;
 }
 
-.movie-info {
-  margin-right: 20px;
+.single-movie-container {
+  overflow: hidden;
+  max-width: 900px; /* Maximum width for larger screens */
+  width: 100%; /* Full width on smaller screens */
+  display: flex;
+  flex-direction: row;
 }
 
-.movie-image {
-  width: 500px;
+.single-movie-image {
+  width: auto;
+  height: auto;
+  opacity: 0.9;
   border-radius: 8px;
 }
 
-.movie-meta p {
+.single-movie-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.single-movie-meta {
+  margin-top: 15px;
+}
+
+.single-movie-meta p {
   margin: 10px 0;
+}
+
+.single-movie-genres {
+  color: #1677ff;
 }
 
 .tagline {
   font-style: italic;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+  opacity: 0.7;
+}
+
+.button-rate-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .trailer-button {
+  width: 100px;
   background-color: #1677ff;
   color: #e6e6e6;
   border: none;
@@ -38,4 +66,42 @@
 
 .trailer-button:hover {
   background-color: #0e5dbb;
+}
+
+.rate {
+  margin-top: 15px;
+  color: #ffc107;
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+  .single-movie-container {
+    flex-direction: column;
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .single-movie-info h1 {
+    font-size: 1.5rem; /* Responsive heading size */
+  }
+
+  .button-rate-container {
+    flex-direction: column; /* Stack on smaller screens */
+    align-items: center; /* Align to the left */
+  }
+
+  .trailer-button {
+    margin-right: 0; /* Remove margin on smaller screens */
+    margin-bottom: 10px; /* Space below button */
+  }
+
+  .single-movie-info {
+    text-align: center; /* Center text in the container */
+  }
+
+  .single-movie-info h1,
+  .single-movie-info .overview,
+  .single-movie-meta p {
+    margin: 10px 0; /* Maintain some spacing */
+    max-width: 100%; /* Ensure they don't overflow */
+  }
 }
