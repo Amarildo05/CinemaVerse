@@ -4,7 +4,7 @@ export type AllMoviesType = {
   id: number;
   title: string;
   poster_path: string;
-  genre_ids: number;
+  genre_ids: number[];
   overview: string;
   vote_average: number;
 };

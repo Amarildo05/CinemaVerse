@@ -4,11 +4,23 @@ import { AllMoviesType } from "../../../types";
 import { GlobalContext } from "../../../context/GlobalContext";
 import { useContext } from "react";
 import useMovieNavigation from "../../../hooks/useMovieNavigation";
-import { HeartOutlined } from "@ant-design/icons";
+import { HeartFilled, HeartOutlined } from "@ant-design/icons";
 
 const { Meta } = Card;
 
 export default function MovieCard(props: AllMoviesType) {
+  const { favorites, addFavorite, removeFavorite } = useContext(GlobalContext);
+  const isFavorite = favorites.some((movie) => movie.id === props.id); // Check if the movie is already a favorite
+
+  const handleFavoriteClick = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent triggering card click
+    if (isFavorite) {
+      removeFavorite(props.id); // Remove from favorites if it is listed
+    } else {
+      addFavorite(props); // Add to favorites if it is not listed
+    }
+  };
+
   const handleNavigateClick = useMovieNavigation(props.id);
 
   const themeContext = useContext(GlobalContext);
@@ -81,9 +93,13 @@ export default function MovieCard(props: AllMoviesType) {
             right: "10px",
             color: themeContext.theme === "dark" ? "white" : "black",
           }}
-          onClick={(e) => e.stopPropagation()} // prevent it to be clicked
+          onClick={handleFavoriteClick}
         >
-          <HeartOutlined style={{ fontSize: "18px" }} />
+          {isFavorite ? (
+            <HeartFilled style={{ fontSize: "18px" }} />
+          ) : (
+            <HeartOutlined style={{ fontSize: "18px" }} />
+          )}
         </button>
       </Card>
     </Popover>

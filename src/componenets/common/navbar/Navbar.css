@@ -28,10 +28,10 @@ nav img:hover {
 }
 
 /* Clean button inside the input */
-.custom-input .ant-input-clear-icon {
+/* .custom-input .ant-input-clear-icon {
   font-size: 20px;
   height: 26px;
-}
+} */
 
 /* Home/Favorites */
 nav ul {
@@ -100,7 +100,6 @@ span {
 
   nav ul li {
     margin: 10px 0; /* Spacing between items */
-    text-align: center;
   }
 
   .custom-input {

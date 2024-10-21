@@ -9,6 +9,7 @@ import {
   MoonOutlined,
   SunOutlined,
   MenuFoldOutlined,
+  SearchOutlined,
 } from "@ant-design/icons";
 import { Input, Switch } from "antd";
 
@@ -75,7 +76,7 @@ export default function Navbar() {
               : "1px solid #333",
         }}
         placeholder="Search for a movie"
-        allowClear
+        suffix={<SearchOutlined style={{ cursor: "pointer", fontSize: "20px" }} />}
       />
 
       <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
