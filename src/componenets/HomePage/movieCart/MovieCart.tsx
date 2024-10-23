@@ -5,6 +5,7 @@ import { GlobalContext } from "../../../context/GlobalContext";
 import { useContext } from "react";
 import useMovieNavigation from "../../../hooks/useMovieNavigation";
 import { HeartFilled, HeartOutlined } from "@ant-design/icons";
+import { genres } from "../../../genre";
 
 const { Meta } = Card;
 
@@ -34,6 +35,11 @@ export default function MovieCard(props: AllMoviesType) {
       <Rate allowHalf value={rating} disabled className="popover-rate" />
     </div>
   );
+
+  const genreNames = props.genre_ids
+    .map((id) => genres.find((genre) => genre.id === id)?.name)
+    .filter(Boolean)
+    .join(" - ");
 
   return (
     <Popover placement="leftTop" content={content}>
@@ -78,19 +84,13 @@ export default function MovieCard(props: AllMoviesType) {
                 color: themeContext.theme === "dark" ? "white" : "black",
               }}
             >
-              {props.genre_ids}
+              {genreNames}
             </span>
           }
         />
         <button
           className="favorite-button"
           style={{
-            background: "transparent",
-            border: "none",
-            cursor: "pointer",
-            position: "absolute",
-            bottom: "10px",
-            right: "10px",
             color: themeContext.theme === "dark" ? "white" : "black",
           }}
           onClick={handleFavoriteClick}
