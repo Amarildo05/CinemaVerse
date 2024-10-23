@@ -1,6 +1,6 @@
 import useTopRatedMoviesFetch from "../../../hooks/movies-data-hooks/useTopRatedMoviesFetch";
 import Error from "../../common/Error";
-import Loading from "../../common/Loading";
+import CardsLoading from "../../common/cardsLoading/CardsLoading";
 import MovieCard from "../movieCart/MovieCart";
 
 export default function TopRatedMovies() {
@@ -11,7 +11,7 @@ export default function TopRatedMovies() {
   } = useTopRatedMoviesFetch();
 
   if (loading) {
-    return <Loading />;
+    return <CardsLoading />;
   }
 
   if (error) {

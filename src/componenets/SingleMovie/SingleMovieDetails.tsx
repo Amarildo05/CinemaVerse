@@ -27,7 +27,11 @@ export default function SingleMovieDetails({ movie }: SingleMovieDetailsProps) {
         }}
       >
         <img
-          src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
+          src={
+            movie.backdrop_path
+              ? `https://image.tmdb.org/t/p/w500${movie.backdrop_path}`
+              : "/single-movie-filler.jpg"
+          }
           alt={movie.title}
           className="single-movie-image"
         />

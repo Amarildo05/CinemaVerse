@@ -6,6 +6,7 @@ import { GlobalContext } from "./context/GlobalContext";
 import { AllMoviesType, ThemeType } from "./types";
 import { FloatButton } from "antd";
 import SingleMovie from "./pages/SingleMovie";
+import NotFound from "./notFound/NotFound";
 
 function App() {
   const defaultTheme: ThemeType = localStorage.getItem("theme")
@@ -40,6 +41,10 @@ function App() {
     {
       path: "/favorites",
       element: <Favorites />,
+    },
+    {
+      path: "*",
+      element: <NotFound />,
     },
   ]);
 

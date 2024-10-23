@@ -1,6 +1,6 @@
 import { Pagination } from "antd";
 import Error from "../../common/Error";
-import Loading from "../../common/Loading";
+import CardsLoading from "../../common/cardsLoading/CardsLoading";
 import MovieCard from "../movieCart/MovieCart";
 import "./AllMovies.css";
 import { useState } from "react";
@@ -8,10 +8,14 @@ import useAllMoviesFetch from "../../../hooks/movies-data-hooks/useAllMoviesFetc
 
 export default function AllMovies() {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const { allMoviesData: allMovies, loading, error } = useAllMoviesFetch(currentPage);
+  const {
+    allMoviesData: allMovies,
+    loading,
+    error,
+  } = useAllMoviesFetch(currentPage);
 
   if (loading) {
-    return <Loading />;
+    return <CardsLoading />;
   }
 
   if (error) {

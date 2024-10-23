@@ -1,6 +1,6 @@
 import useUpcomingMoviesFetch from "../../../hooks/movies-data-hooks/useUpcomingMoviesFetch";
 import Error from "../../common/Error";
-import Loading from "../../common/Loading";
+import CardsLoading from "../../common/cardsLoading/CardsLoading";
 import MovieCard from "../movieCart/MovieCart";
 
 export default function UpcomingMovies() {
@@ -11,7 +11,7 @@ export default function UpcomingMovies() {
   } = useUpcomingMoviesFetch();
 
   if (loading) {
-    return <Loading />;
+    return <CardsLoading />;
   }
 
   if (error) {

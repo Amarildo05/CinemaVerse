@@ -1,7 +1,7 @@
 import { Carousel } from "antd";
 import "./PopularMovies.css";
 import usePopularMoviesFetch from "../../../hooks/movies-data-hooks/usePopularMoviesFetch";
-import Loading from "../../common/Loading";
+import CarouselLoading from "../../common/carouselLoading/CarouselLoading";
 import Error from "../../common/Error";
 import PopularMovieCard from "./PopularMovieCard";
 
@@ -13,7 +13,7 @@ export default function PopularMovies() {
   } = usePopularMoviesFetch();
 
   if (loading) {
-    return <Loading />;
+    return <CarouselLoading />;
   }
 
   if (error) {
@@ -32,10 +32,7 @@ export default function PopularMovies() {
         arrows={false}
       >
         {popularMovies.map((movie) => (
-          <PopularMovieCard 
-            key={movie.id} 
-            movie={movie} 
-          />
+          <PopularMovieCard key={movie.id} movie={movie} />
         ))}
       </Carousel>
     </div>
