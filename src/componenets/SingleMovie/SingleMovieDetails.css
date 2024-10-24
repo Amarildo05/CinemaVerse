@@ -106,3 +106,7 @@
     max-width: 100%; /* Ensure they don't overflow */
   }
 }
+
+.ant-modal-close {
+  color: white !important; /* Make close button ("X") white*/
+}

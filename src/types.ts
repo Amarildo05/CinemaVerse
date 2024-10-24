@@ -20,6 +20,11 @@ export type GenreType = {
   name: string;
 };
 
+export type VideoType = {
+  key: string;
+  type: string;
+};
+
 export type SingleMovieType = {
   id: number;
   title: string;
@@ -30,4 +35,7 @@ export type SingleMovieType = {
   release_date: string;
   runtime: number;
   vote_average: number;
+  videos: {
+    results: VideoType[];
+  };
 };

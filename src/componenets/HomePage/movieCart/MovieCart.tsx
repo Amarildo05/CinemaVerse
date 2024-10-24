@@ -96,9 +96,9 @@ export default function MovieCard(props: AllMoviesType) {
           onClick={handleFavoriteClick}
         >
           {isFavorite ? (
-            <HeartFilled style={{ fontSize: "18px" }} />
+            <HeartFilled style={{ fontSize: "20px" }} />
           ) : (
-            <HeartOutlined style={{ fontSize: "18px" }} />
+            <HeartOutlined style={{ fontSize: "20px" }} />
           )}
         </button>
       </Card>

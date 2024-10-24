@@ -22,7 +22,7 @@ export default function Error() {
       </svg>
       <h2 className="error-title">Oops! Something went wrong.</h2>
       <p className="error-message">
-        We couldn't load the movies at this time. Please try again later.
+        We couldn't load ant movie at this time. Please try again later.
       </p>
     </div>
   );
