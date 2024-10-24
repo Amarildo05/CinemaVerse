@@ -4,7 +4,7 @@ import "./SingleMovieDetails.css";
 import { useContext, useState } from "react";
 import { GlobalContext } from "../../context/GlobalContext";
 import { Modal, Rate } from "antd";
-import Error from "../common/Error";
+import Error from "../common/errors/Error";
 
 type SingleMovieDetailsProps = {
   movie: SingleMovieType | null;

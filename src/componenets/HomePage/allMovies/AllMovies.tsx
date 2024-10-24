@@ -1,5 +1,5 @@
 import { Pagination } from "antd";
-import Error from "../../common/Error";
+import Error from "../../common/errors/Error";
 import CardsLoading from "../../common/cardsLoading/CardsLoading";
 import MovieCard from "../movieCart/MovieCart";
 import "./AllMovies.css";

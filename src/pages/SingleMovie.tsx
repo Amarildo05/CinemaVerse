@@ -6,7 +6,7 @@ import { GlobalContext } from "../context/GlobalContext";
 import SingleMovieDetails from "../componenets/SingleMovie/SingleMovieDetails";
 import useSingleMovieFetch from "../hooks/movies-data-hooks/useSingleMovieFetch";
 import Loading from "../componenets/common/cardsLoading/CardsLoading";
-import Error from "../componenets/common/Error";
+import Error from "../componenets/common/errors/Error";
 import { useParams } from "react-router-dom";
 
 export default function SingleMovie() {

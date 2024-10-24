@@ -1,28 +1,44 @@
 .carousel-loading-container {
   width: 70%;
-  margin: 25px auto; /* Center the carousel */
+  margin: 25px auto;
   display: flex;
   justify-content: space-between; /* Align skeletons like movie cards */
 }
 
 .carousel-card-skeleton {
-  width: 100%; /* Match the movie card width */
-  height: 25vh; /* Match the movie card height */
+  width: 100%;
+  height: 35vh;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   overflow: hidden; /* Prevent overflow */
-  margin: 0 8px; /* Adjust margin for spacing */
+  margin: 0 8px;
   position: relative;
 }
 
 .carousel-card-skeleton .ant-skeleton {
-  height: 100%; /* Make the skeleton fill the card */
-  border-radius: 5px; /* Match the card's border radius */
+  height: 100%; 
+  border-radius: 5px;
 }
 
-/* Optional: You can add a pulse effect if desired */
 .carousel-card-skeleton .ant-skeleton-active {
   animation: loading 1.5s infinite;
+}
+
+.carousel-card-skeleton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.2)
+  );
+  animation: loading 1.5s infinite;
+  border-radius: 5px;
 }
 
 @keyframes loading {
@@ -31,5 +47,30 @@
   }
   100% {
     transform: translateX(100%);
+  }
+}
+
+/* For bigger screens */
+@media (max-width: 1000px) {
+  .carousel-card-skeleton {
+    height: 25vh; /* Decrease height for very big screens */
+  }
+}
+
+/* For smaller screens */
+@media (max-width: 700px) {
+  .carousel-loading-container {
+    width: 90%; /* Make the carousel wider on small screens */
+  }
+
+  .carousel-card-skeleton {
+    height: 20vh; /* Decrease height for smaller screens */
+    width: 100%; /* Full width for mobile */
+  }
+}
+
+@media (max-width: 420px) {
+  .carousel-card-skeleton {
+    height: 15vh; /* Decrease height for very small screens */
   }
 }

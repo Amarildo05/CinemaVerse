@@ -2,7 +2,7 @@ import { Carousel } from "antd";
 import "./PopularMovies.css";
 import usePopularMoviesFetch from "../../../hooks/movies-data-hooks/usePopularMoviesFetch";
 import CarouselLoading from "../../common/carouselLoading/CarouselLoading";
-import Error from "../../common/Error";
+import Error from "../../common/errors/Error";
 import PopularMovieCard from "./PopularMovieCard";
 
 export default function PopularMovies() {

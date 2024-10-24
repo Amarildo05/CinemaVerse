@@ -1,13 +1,9 @@
-import { useContext } from "react";
 import "./Error.css";
-import { GlobalContext } from "../../context/GlobalContext";
 
 export default function Error() {
-  const themeContext = useContext(GlobalContext);
-
   return (
     <div
-      style={{ color: themeContext.theme === "light" ? "black" : "white" }}
+      style={{ color: "#9e9e9e" }}
       className="error-container"
     >
       <svg
@@ -22,7 +18,7 @@ export default function Error() {
       </svg>
       <h2 className="error-title">Oops! Something went wrong.</h2>
       <p className="error-message">
-        We couldn't load ant movie at this time. Please try again later.
+        We couldn't load any movie at this time. Please try again later.
       </p>
     </div>
   );
