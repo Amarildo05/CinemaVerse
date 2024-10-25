@@ -39,3 +39,7 @@ export type SingleMovieType = {
     results: VideoType[];
   };
 };
+
+export type SearchedMoviesListProps = {
+  query: string | null;
+};

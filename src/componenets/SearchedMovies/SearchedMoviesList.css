@@ -1,0 +1,10 @@
+.searched-movies-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 25px 0px 15px 0px;
+}
+
+.message-container {
+  margin-top: 10%;
+}

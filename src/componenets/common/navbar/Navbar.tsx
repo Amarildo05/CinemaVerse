@@ -16,6 +16,7 @@ import { Input, Switch } from "antd";
 export default function Navbar() {
   const themeContext = useContext(GlobalContext);
   const currentPath = useLocation();
+  const [searchQuery, setSearchQuery] = useState("");
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   function onChange(checked: boolean) {
@@ -49,6 +50,13 @@ export default function Navbar() {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  // Check if the value is valid and redirect user to the SearchedMovie Url
+  const handleSearch = () => {
+    if (searchQuery.trim()) {
+      window.location.href = `/searchedMovies?query=${searchQuery}`;
+    }
+  };
+
   return (
     <nav
       style={{
@@ -76,7 +84,19 @@ export default function Navbar() {
               : "1px solid #333",
         }}
         placeholder="Search for a movie"
-        suffix={<SearchOutlined style={{ cursor: "pointer", fontSize: "20px" }} />}
+        suffix={
+          <SearchOutlined
+            style={{ cursor: "pointer", fontSize: "20px" }}
+            onClick={handleSearch}
+          />
+        }
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        onKeyPress={(e) => {
+          if (e.key === "Enter") {
+            handleSearch();
+          }
+        }}
       />
 
       <div className="mobile-menu-icon" onClick={toggleMobileMenu}>

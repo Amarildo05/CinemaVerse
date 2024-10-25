@@ -7,6 +7,7 @@ import { AllMoviesType, ThemeType } from "./types";
 import { FloatButton } from "antd";
 import SingleMovie from "./pages/SingleMovie";
 import NotFound from "./notFound/NotFound";
+import SearchedMovies from "./pages/SearchedMovies";
 
 function App() {
   const defaultTheme: ThemeType = localStorage.getItem("theme")
@@ -41,6 +42,10 @@ function App() {
     {
       path: "/favorites",
       element: <Favorites />,
+    },
+    {
+      path: "/searchedMovies",
+      element: <SearchedMovies />,
     },
     {
       path: "*",
