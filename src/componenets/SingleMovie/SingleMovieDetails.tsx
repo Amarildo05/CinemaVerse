@@ -5,6 +5,7 @@ import { useContext, useState } from "react";
 import { GlobalContext } from "../../context/GlobalContext";
 import { Modal, Rate } from "antd";
 import Error from "../common/errors/Error";
+import MovieReservation from "./MovieReservation";
 
 type SingleMovieDetailsProps = {
   movie: SingleMovieType | null;
@@ -72,7 +73,7 @@ export default function SingleMovieDetails({ movie }: SingleMovieDetailsProps) {
           </div>
 
           <div className="button-rate-container">
-            <button className="trailer-button" onClick={showModal}>
+            <button className="trailer-reservation-button" onClick={showModal}>
               <PlayCircleOutlined /> Trailer
             </button>
             <Modal
@@ -107,6 +108,7 @@ export default function SingleMovieDetails({ movie }: SingleMovieDetailsProps) {
           </div>
         </div>
       </div>
+      <MovieReservation />
     </div>
   );
 }

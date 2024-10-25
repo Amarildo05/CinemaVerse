@@ -6,5 +6,6 @@
 }
 
 .no-favorite {
+  max-width: 370px;
   margin-top: 5%;
 }
