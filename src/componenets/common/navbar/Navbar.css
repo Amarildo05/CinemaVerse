@@ -92,6 +92,7 @@ span {
     background-color: inherit;
     padding: 10px;
     z-index: 999; /* Ensure it's above other content */
+    border-bottom-left-radius: 8px;
   }
 
   nav ul.open {

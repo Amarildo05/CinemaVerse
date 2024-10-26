@@ -76,7 +76,7 @@ export default function SingleMovieDetails({ movie }: SingleMovieDetailsProps) {
             <button className="trailer-reservation-button" onClick={showModal}>
               <PlayCircleOutlined /> Trailer
             </button>
-            {isModalVisible && (  // Hide modal when is not used
+            {isModalVisible && ( // Hide modal when is not used
               <Modal
                 open={isModalVisible}
                 onCancel={hideModal}
@@ -89,7 +89,7 @@ export default function SingleMovieDetails({ movie }: SingleMovieDetailsProps) {
                     src={
                       trailerKey
                         ? `https://www.youtube.com/embed/${trailerKey}?autoplay=1`
-                        : ""
+                        : "/no-trailer.svg"
                     }
                     frameBorder="0"
                     allowFullScreen
