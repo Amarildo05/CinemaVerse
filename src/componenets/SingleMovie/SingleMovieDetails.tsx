@@ -76,32 +76,34 @@ export default function SingleMovieDetails({ movie }: SingleMovieDetailsProps) {
             <button className="trailer-reservation-button" onClick={showModal}>
               <PlayCircleOutlined /> Trailer
             </button>
-            <Modal
-              visible={isModalVisible}
-              onCancel={hideModal}
-              footer={null}
-              width={800}
-            >
-              <div style={{ paddingTop: "56.25%" }}>
-                <iframe
-                  title="Trailer"
-                  src={
-                    trailerKey
-                      ? `https://www.youtube.com/embed/${trailerKey}?autoplay=1`
-                      : ""
-                  }
-                  frameBorder="0"
-                  allowFullScreen
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                  }}
-                />
-              </div>
-            </Modal>
+            {isModalVisible && (  // Hide modal when is not used
+              <Modal
+                open={isModalVisible}
+                onCancel={hideModal}
+                footer={null}
+                width={800}
+              >
+                <div style={{ paddingTop: "56.25%" }}>
+                  <iframe
+                    title="Trailer"
+                    src={
+                      trailerKey
+                        ? `https://www.youtube.com/embed/${trailerKey}?autoplay=1`
+                        : ""
+                    }
+                    frameBorder="0"
+                    allowFullScreen
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  />
+                </div>
+              </Modal>
+            )}
             <div className="rating-container">
               <Rate allowHalf value={rating} disabled className="rate" />
             </div>

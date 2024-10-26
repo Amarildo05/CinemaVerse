@@ -29,11 +29,11 @@
   color: #363636 !important; /* Arrows hover color */
 }
 
-.pagination.dark .ant-pagination-item a {
+.pagination.light .ant-pagination-item a {
   color: black !important; /* Number color */
 }
 
-.pagination.dark .ant-pagination-item-active a {
+.pagination.light .ant-pagination-item-active a {
   color: #1677ff !important; /* Active number color */
 }
 
