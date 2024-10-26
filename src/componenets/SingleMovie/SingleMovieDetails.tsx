@@ -5,7 +5,7 @@ import { useContext, useState } from "react";
 import { GlobalContext } from "../../context/GlobalContext";
 import { Modal, Rate } from "antd";
 import Error from "../common/errors/Error";
-import MovieReservation from "./MovieReservation";
+import MovieReservation from "./movieReservation/MovieReservation";
 
 type SingleMovieDetailsProps = {
   movie: SingleMovieType | null;
@@ -110,7 +110,7 @@ export default function SingleMovieDetails({ movie }: SingleMovieDetailsProps) {
           </div>
         </div>
       </div>
-      <MovieReservation />
+      <MovieReservation title={movie.title} />
     </div>
   );
 }

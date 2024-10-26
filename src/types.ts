@@ -43,3 +43,12 @@ export type SingleMovieType = {
 export type SearchedMoviesListProps = {
   query: string | null;
 };
+
+export type ReservationFormValues = {
+  fullName: string;
+  tickets: number;
+  seats: string[];
+  cardNumber: string;
+  cvv: string;
+  expirationDate: string;
+};

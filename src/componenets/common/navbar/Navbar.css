@@ -24,14 +24,7 @@ nav img:hover {
 .custom-input {
   width: 300px;
   height: 40px;
-  padding: 12px;
 }
-
-/* Clean button inside the input */
-/* .custom-input .ant-input-clear-icon {
-  font-size: 20px;
-  height: 26px;
-} */
 
 /* Home/Favorites */
 nav ul {
