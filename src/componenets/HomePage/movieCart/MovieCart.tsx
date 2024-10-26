@@ -26,6 +26,7 @@ export default function MovieCard(props: AllMoviesType) {
 
   const themeContext = useContext(GlobalContext);
 
+  // Make Rating from 0/10 to 0/5
   const rating = props.vote_average / 2;
 
   const content = (
@@ -36,6 +37,7 @@ export default function MovieCard(props: AllMoviesType) {
     </div>
   );
 
+  // Find genre in the array of "genres" and display them
   const genreNames = props.genre_ids
     .map((id) => genres.find((genre) => genre.id === id)?.name)
     .filter(Boolean)

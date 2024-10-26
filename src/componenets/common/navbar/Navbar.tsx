@@ -19,7 +19,7 @@ export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  function onChange(checked: boolean) {
+  function onChangeTheme(checked: boolean) {
     if (checked) {
       themeContext.setTheme("light");
       localStorage.setItem("theme", "light");
@@ -46,6 +46,7 @@ export default function Navbar() {
     },
   ];
 
+  // Menu that appears on mobile view
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -127,7 +128,7 @@ export default function Navbar() {
           checkedChildren={<SunOutlined className="switch-icons" />}
           unCheckedChildren={<MoonOutlined className="switch-icons" />}
           defaultChecked={themeContext.theme === "light"}
-          onChange={onChange}
+          onChange={onChangeTheme}
         />
       </ul>
     </nav>

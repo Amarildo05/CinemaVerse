@@ -33,6 +33,7 @@ export default function SingleMovieDetails({ movie }: SingleMovieDetailsProps) {
     setTrailerKey(null);
   };
 
+  // Make Rating from 0/10 to 0/5
   const rating = movie.vote_average / 2;
 
   return (

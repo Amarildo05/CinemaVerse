@@ -79,7 +79,7 @@ span {
     flex-direction: column;
     display: none; /* Hidden by default */
     position: absolute;
-    top: 60px; /* Adjust based on your navbar height */
+    top: 60px;
     left: 10;
     right: 0;
     background-color: inherit;

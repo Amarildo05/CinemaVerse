@@ -34,6 +34,12 @@ export default function MoviesMenu() {
     }
   };
 
+  const items = [
+    { key: "all", icon: <HomeOutlined />, label: "Browse All" },
+    { key: "top-rated", icon: <StarOutlined />, label: "Top Rated" },
+    { key: "upcoming", icon: <CalendarOutlined />, label: "Upcoming" },
+  ];
+
   return (
     <>
       <div
@@ -43,18 +49,9 @@ export default function MoviesMenu() {
           onClick={handleMenuClick}
           selectedKeys={[selectedKey]}
           mode="horizontal"
-          style={{ fontSize: '15px'}} 
-        >
-          <Menu.Item key="all" icon={<HomeOutlined />}>
-            Browse All
-          </Menu.Item>
-          <Menu.Item key="top-rated" icon={<StarOutlined />}>
-            Top Rated
-          </Menu.Item>
-          <Menu.Item key="upcoming" icon={<CalendarOutlined />}>
-            Upcoming
-          </Menu.Item>
-        </Menu>
+          style={{ fontSize: "15px" }}
+          items={items} // Use the "items" prop here
+        />
         <div>{renderContent()}</div>
       </div>
     </>

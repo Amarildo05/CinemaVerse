@@ -1,3 +1,4 @@
+/* Main layout for main pages */
 .page-container {
   display: flex;
   flex-direction: column;
