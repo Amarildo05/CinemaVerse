@@ -3,10 +3,13 @@ import Error from "../../common/errors/Error";
 import CardsLoading from "../../common/cardsLoading/CardsLoading";
 import MovieCard from "../movieCart/MovieCart";
 import "./AllMovies.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import useAllMoviesFetch from "../../../hooks/movies-data-hooks/useAllMoviesFetch";
+import { GlobalContext } from "../../../context/GlobalContext";
 
 export default function AllMovies() {
+  const themeContext = useContext(GlobalContext);
+
   const [currentPage, setCurrentPage] = useState<number>(1);
   const {
     allMoviesData: allMovies,
@@ -43,7 +46,7 @@ export default function AllMovies() {
           );
         })}
       </div>
-      <div className="pagination">
+      <div className={`pagination ${themeContext.theme}`}>
         <Pagination
           current={currentPage}
           onChange={handlePageChange}

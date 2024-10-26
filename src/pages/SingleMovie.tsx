@@ -5,7 +5,6 @@ import "./PageContainer.css";
 import { GlobalContext } from "../context/GlobalContext";
 import SingleMovieDetails from "../componenets/SingleMovie/SingleMovieDetails";
 import useSingleMovieFetch from "../hooks/movies-data-hooks/useSingleMovieFetch";
-import Loading from "../componenets/common/cardsLoading/CardsLoading";
 import Error from "../componenets/common/errors/Error";
 import { useParams } from "react-router-dom";
 
@@ -14,15 +13,14 @@ export default function SingleMovie() {
   const { id } = useParams(); // Get the movie ID from the URL
   const { singleMovieData, loading, error } = useSingleMovieFetch(id);
 
-  if (loading) return <Loading />;
+  if (loading) return <p>Loading...</p>;
   if (error) return <Error />;
 
   return (
     <div
       className="page-container"
       style={{
-        backgroundColor:
-          themeContext.theme === "dark" ? "#5a5a5a" : "#e6e6e6",
+        backgroundColor: themeContext.theme === "dark" ? "#5a5a5a" : "#e6e6e6",
       }}
     >
       <Navbar />

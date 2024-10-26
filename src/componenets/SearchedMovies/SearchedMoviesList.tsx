@@ -5,14 +5,16 @@ import MovieCard from "../HomePage/movieCart/MovieCart";
 import "./SearchedMoviesList.css";
 import { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalContext";
+import Error from "../common/errors/Error";
+import CardsLoading from "../common/cardsLoading/CardsLoading";
 
 export default function SearchedMoviesList({ query }: SearchedMoviesListProps) {
   const themeContext = useContext(GlobalContext);
 
   const { searchedMovieData, loading, error } = useSearchMovieFetch(query);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error...</div>;
+  if (loading) return <CardsLoading />;
+  if (error) return <Error />;
 
   return (
     <div className="searched-movies-list">

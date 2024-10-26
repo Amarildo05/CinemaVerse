@@ -10,3 +10,55 @@
   justify-content: center;
   margin-bottom: 25px;
 }
+
+/* Light Pagination */
+.pagination.light .ant-pagination-item {
+  background-color: #b8b8b8;
+  border: none;
+}
+
+.pagination.light .ant-pagination-item:hover {
+  background-color: #c9c8c8;
+}
+
+.pagination.light .ant-pagination-item-link {
+  color: black !important; /* Arrows color */
+}
+
+.pagination.light .ant-pagination-item-link:hover {
+  color: #363636 !important; /* Arrows hover color */
+}
+
+.pagination.dark .ant-pagination-item a {
+  color: black !important; /* Number color */
+}
+
+.pagination.dark .ant-pagination-item-active a {
+  color: #1677ff !important; /* Active number color */
+}
+
+/* Dark Pagination */
+.pagination.dark .ant-pagination-item {
+  background-color: #404040;
+  border: none;
+}
+
+.pagination.dark .ant-pagination-item:hover {
+  background-color: #4c4c4c;
+}
+
+.pagination.dark .ant-pagination-item-link {
+  color: white !important; /* Arrows color */
+}
+
+.pagination.dark .ant-pagination-item-link:hover {
+  color: #ccc !important; /* Arrows hover color */
+}
+
+.pagination.dark .ant-pagination-item a {
+  color: white !important; /* Number color */
+}
+
+.pagination.dark .ant-pagination-item-active a {
+  color: #1677ff !important; /* Active number color */
+}
