@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Favorites from "./pages/Favorites";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GlobalContext } from "./context/GlobalContext";
 import { AllMoviesType, ThemeType } from "./types";
 import { FloatButton } from "antd";
@@ -15,7 +15,17 @@ function App() {
     : "dark";
 
   const [theme, setTheme] = useState<ThemeType>(defaultTheme);
-  const [favorites, setFavorites] = useState<AllMoviesType[]>([]);
+
+  // Initialize favorites from localStorage
+  const [favorites, setFavorites] = useState<AllMoviesType[]>(() => {
+    const savedFavorites = localStorage.getItem("favorites");
+    return savedFavorites ? JSON.parse(savedFavorites) : [];
+  });
+
+  // Update localStorage whenever favorites change
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  }, [favorites]);
 
   // Function to add movie to favorites
   const addFavorite = (movie: AllMoviesType) => {
@@ -36,7 +46,7 @@ function App() {
       element: <HomePage />,
     },
     {
-      path: "/singleMovie/:id",
+      path: "/single-movie/:id",
       element: <SingleMovie />,
     },
     {
@@ -44,7 +54,7 @@ function App() {
       element: <Favorites />,
     },
     {
-      path: "/searchedMovies",
+      path: "/searched-movies",
       element: <SearchedMovies />,
     },
     {

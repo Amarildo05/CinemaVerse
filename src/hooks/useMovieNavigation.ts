@@ -5,7 +5,7 @@ function useMovieNavigation(id: number) {
   const nav = useNavigate();
 
   function handleNavigateClick() {
-    nav(`/singleMovie/${id}`);
+    nav(`/single-movie/${id}`);
   }
   return handleNavigateClick;
 }

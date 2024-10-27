@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import "./Navbar.css";
 import { GlobalContext } from "../../../context/GlobalContext";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import {
   HeartOutlined,
@@ -19,6 +19,7 @@ export default function Navbar() {
   const currentPath = useLocation();
   const [searchQuery, setSearchQuery] = useState("");
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navSearch = useNavigate();
 
   function onChangeTheme(checked: boolean) {
     if (checked) {
@@ -55,7 +56,7 @@ export default function Navbar() {
   // Check if the value is valid and redirect user to the SearchedMovie Url
   const handleSearch = () => {
     if (searchQuery.trim()) {
-      window.location.href = `/searchedMovies?query=${searchQuery}`;
+      navSearch(`/searched-movies?query=${searchQuery}`);
     }
   };
 
