@@ -29,3 +29,10 @@
   justify-content: center; 
   width: 100%;
 }
+
+.disclaimer {
+  text-align: center;
+  color: gray;
+  font-size: 13px;
+  margin-top: 15px; /* Adjust as needed */
+}

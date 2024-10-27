@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { CalendarOutlined } from "@ant-design/icons";
-import { Modal, Form as AntForm, Input, Select, Button } from "antd";
+import { Modal, Form as AntForm, Input, Select, Button, message } from "antd";
 import { Formik, FormikHelpers } from "formik";
 import * as Yup from "yup"; // Import Yup
 import "../SingleMovieDetails.css";
@@ -62,6 +62,7 @@ export default function MovieReservation(props: ModalMovieTitle) {
     { resetForm }: FormikHelpers<ReservationFormValues>
   ) => {
     console.log("Reservation for", props.title, values);
+    message.success("Your reservation has been successfully created!");
     resetForm();
     handleCancel();
   };
@@ -222,6 +223,10 @@ export default function MovieReservation(props: ModalMovieTitle) {
                     </Button>
                   </div>
                 </AntForm>
+                <div className="disclaimer">
+                  *This reservation is for simulation purposes only and does not
+                  represent a real booking.
+                </div>
               </div>
             );
           }}

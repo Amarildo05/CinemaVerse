@@ -12,6 +12,7 @@ import {
   SearchOutlined,
 } from "@ant-design/icons";
 import { Input, Switch } from "antd";
+import QrCode from "../../HomePage/qrCode/QrCode";
 
 export default function Navbar() {
   const themeContext = useContext(GlobalContext);
@@ -130,6 +131,7 @@ export default function Navbar() {
           defaultChecked={themeContext.theme === "light"}
           onChange={onChangeTheme}
         />
+        <QrCode />
       </ul>
     </nav>
   );

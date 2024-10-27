@@ -1,0 +1,16 @@
+.qr-button {
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  backdrop-filter: blur(10px);
+}
+
+.qr-icon {
+  padding-left: 2px;
+}
+
+@media (max-width: 820px) {
+  .qr-button {
+    margin-left: 20px;
+  }
+}
