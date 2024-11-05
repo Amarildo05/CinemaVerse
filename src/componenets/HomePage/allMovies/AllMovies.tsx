@@ -51,7 +51,7 @@ export default function AllMovies() {
           current={currentPage}
           onChange={handlePageChange}
           showSizeChanger={false}
-          total={2800}
+          total={3200}
         />
       </div>
     </>

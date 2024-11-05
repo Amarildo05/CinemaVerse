@@ -67,9 +67,21 @@ export default function SingleMovieDetails({ movie }: SingleMovieDetailsProps) {
             <p>
               <strong>Runtime:</strong> {movie.runtime} minutes
             </p>
-            <p>
-              <strong>Genre:</strong>{" "}
-              {movie.genres.map((genre) => genre.name).join(" - ")}
+            <p className="genres">
+              {movie.genres.map((genre) => (
+                <span
+                  key={genre.id}
+                  className="genre-tag"
+                  style={{
+                    color: themeContext.theme === "dark" ? "white" : "black",
+                    border: `2px solid ${
+                      themeContext.theme === "dark" ? "white" : "black"
+                    }`,
+                  }}
+                >
+                  {genre.name}
+                </span>
+              ))}
             </p>
           </div>
 
