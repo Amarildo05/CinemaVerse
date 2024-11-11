@@ -40,6 +40,18 @@ export type SingleMovieType = {
   };
 };
 
+export type ActorType = {
+  id: number;
+  name: string;
+  profile_path: string | null;
+  character: string;
+};
+
+export type MovieCreditsType = {
+  id: number;
+  cast: ActorType[];
+};
+
 export type SearchedMoviesListProps = {
   query: string | null;
 };
