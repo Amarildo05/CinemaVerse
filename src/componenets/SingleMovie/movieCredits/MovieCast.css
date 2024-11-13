@@ -61,12 +61,6 @@
   font-style: italic;
 }
 
-.slick-prev,
-.slick-next {
-  color: red; /* Change to your desired color */
-  font-size: 24px; /* Optional: Adjust size */
-}
-
 @media (max-width: 800px) {
   .cast-carousel-container {
     margin: 10px auto 30px;

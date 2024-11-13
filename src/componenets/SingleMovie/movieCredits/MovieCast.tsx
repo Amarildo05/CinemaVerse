@@ -9,7 +9,7 @@ import { useParams } from "react-router-dom";
 export default function MovieCast() {
   const themeContext = useContext(GlobalContext);
   const { id } = useParams(); // Get the movie ID from the URL
-  const { movieCredits, loading, error } = useMovieCreditsFetch(id); // Pass your movieId here
+  const { movieCredits, loading, error } = useMovieCreditsFetch(id);
 
   if (loading) {
     return <div>Loading...</div>;
