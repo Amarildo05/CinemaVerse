@@ -6,7 +6,7 @@ import { GlobalContext } from "../../context/GlobalContext";
 import { Modal, Rate } from "antd";
 import Error from "../common/errors/Error";
 import MovieReservation from "./movieReservation/MovieReservation";
-// import MovieCast from "./movieCredits/MovieCast";
+import MovieCast from "./movieCredits/MovieCast";
 
 type SingleMovieDetailsProps = {
   movie: SingleMovieType | null;
@@ -124,7 +124,7 @@ export default function SingleMovieDetails({ movie }: SingleMovieDetailsProps) {
           </div>
         </div>
       </div>
-      {/* <MovieCast /> */}
+      <MovieCast />
       <MovieReservation title={movie.title} />
     </div>
   );

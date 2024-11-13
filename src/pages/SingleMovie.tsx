@@ -26,6 +26,7 @@ export default function SingleMovie() {
         <Spin size="large" />
       </div>
     );
+
   if (error) return <Error />;
 
   return (
