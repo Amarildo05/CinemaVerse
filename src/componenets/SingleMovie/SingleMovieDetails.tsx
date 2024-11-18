@@ -34,6 +34,9 @@ export default function SingleMovieDetails({ movie }: SingleMovieDetailsProps) {
     setTrailerKey(null);
   };
 
+  // Change Release Date to European format
+  const releaseDate = movie.release_date.split("-").reverse().join("-");
+
   // Make Rating from 0/10 to 0/5
   const rating = movie.vote_average / 2;
 
@@ -63,7 +66,7 @@ export default function SingleMovieDetails({ movie }: SingleMovieDetailsProps) {
 
           <div className="single-movie-meta">
             <p>
-              <strong>Release Date:</strong> {movie.release_date}
+              <strong>Release Date:</strong> {releaseDate}
             </p>
             <p>
               <strong>Runtime:</strong> {movie.runtime} minutes
