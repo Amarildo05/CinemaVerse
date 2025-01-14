@@ -15,6 +15,7 @@ export default function AllMovies() {
     allMoviesData: allMovies,
     loading,
     error,
+    totalPages,
   } = useAllMoviesFetch(currentPage);
 
   if (loading) {
@@ -51,7 +52,7 @@ export default function AllMovies() {
           current={currentPage}
           onChange={handlePageChange}
           showSizeChanger={false}
-          total={3000}
+          total={totalPages * 10}
         />
       </div>
     </>
